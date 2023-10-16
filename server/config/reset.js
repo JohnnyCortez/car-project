@@ -12,7 +12,7 @@ const createItemsTable = async () => {
       color VARCHAR(255) NOT NULL,
       roof VARCHAR(255) NOT NULL,
       wheels VARCHAR(255) NOT NULL,
-      iterior VARCHAR(255) NOT NULL
+      interior VARCHAR(255) NOT NULL
     )
   `
 
