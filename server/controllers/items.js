@@ -11,15 +11,19 @@ const getItems = async (req, res) => {
 
 const getItemById = async (req, res) => {
   try {
-    const id = req.params.id
-    const selectQuery = `SELECT name, color, wheels, interior, package_, engine FROM CustomItem WHERE id = ${id}`
-    const results = await pool.query(selectQuery)
+    const id = req.params.id; // Change to req.params.id for consistency
+    const selectQuery = `SELECT name, color, wheels, interior, package_, engine FROM CustomItem WHERE id = $1`;
+    const results = await pool.query(selectQuery, [id]);
 
-    res.status(200).json(results.rows[0])
+    if (results.rows.length === 0) {
+      res.status(404).json({ error: 'Item not found' });
+    } else {
+      res.status(200).json(results.rows[0]);
+    }
   } catch (error) {
-    res.status(409).json( { error: error.message } )
+    res.status(500).json({ error: error.message }); // Use 500 for internal server error
   }
-}
+};
 
 const createItem = async (req, res) => {
   try {

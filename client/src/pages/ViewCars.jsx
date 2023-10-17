@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-// import Link from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import '../App.css'
 
 const ViewCars = () => {
@@ -37,7 +37,7 @@ const ViewCars = () => {
                     <p>{item.wheels}</p>
                     <p>{item.interior}</p>
 
-                    {/* <Link to={`/customcars/:${item.id}`}>Details</Link> */}
+                    <Link to={`/customcars/${item.id}`}>Details</Link>
                    </div>
 
                 ) : <h3 className="noResults">{'No Cars Yet 😞'}</h3>

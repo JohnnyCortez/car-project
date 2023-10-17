@@ -35,7 +35,7 @@ const CreateCar = () => {
         }
 
         fetch('http://localhost:3000/items', options)
-        // window.location = '/'
+        window.location = '/'
     }
 
     return (
@@ -56,20 +56,18 @@ const CreateCar = () => {
         <br/>
 
         <label>Engine</label><br />
-        <select id='roof' name='roof' value={item.engine} onChange={handleChange}>
+        <select id='engine' name='engine' value={item.engine} onChange={handleChange}>
             <option value="Option 1">Option 1</option>
             <option value="Option 2">Option 2</option>
             <option value="Option 3">Option 3</option>
-            <option value="Option 4">Option 4</option>
         </select><br />
         <br/>
 
         <label>Package</label><br />
-        <select id='roof' name='roof' value={item.package_} onChange={handleChange}>
+        <select id='package_' name='package_' value={item.package_} onChange={handleChange}>
             <option value="Option 1">Option 1</option>
             <option value="Option 2">Option 2</option>
             <option value="Option 3">Option 3</option>
-            <option value="Option 4">Option 4</option>
         </select><br />
         <br/>
 
@@ -78,7 +76,6 @@ const CreateCar = () => {
             <option value="Option 1">Option 1</option>
             <option value="Option 2">Option 2</option>
             <option value="Option 3">Option 3</option>
-            <option value="Option 4">Option 4</option>
         </select><br />
         <br/>
 
@@ -86,8 +83,6 @@ const CreateCar = () => {
         <select id='interior' name='interior' value={item.interior} onChange={handleChange}>
             <option value="Option 1">Option 1</option>
             <option value="Option 2">Option 2</option>
-            <option value="Option 3">Option 3</option>
-            <option value="Option 4">Option 4</option>
         </select><br />
         <br/>
 
