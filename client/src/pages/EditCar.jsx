@@ -37,16 +37,33 @@ const EditCar = () => {
 
     const updateItem = (event) => {
         event.preventDefault();
+        if(item.engine == "inline 4" && item.package_ == "Track package"){
+            alert("can't select sport package with inline 4 engine")
+            return
+        }
+        else {
+            const options = {
+                        method: 'PATCH',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(item),
+                    };
+
+                    fetch(`http://localhost:3000/items/${id}`, options);
+                    window.location = '/';
+        }
+        
+    };
+
+    const handleDelete = async (event) => {
+        event.preventDefault();
 
         const options = {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(item),
+            method: 'DELETE',
         };
 
-        fetch(`http://localhost:3000/items/${id}`, options);
+        await fetch(`http://localhost:3000/items/${id}`, options);
         window.location = '/';
     };
 
@@ -105,7 +122,8 @@ const EditCar = () => {
                     </select>
                 </div>
                 <div className="form-group">
-                    <input type='submit' value='Submit' onClick={updateItem} />
+                    <input type='submit' value='Update' onClick={updateItem} />
+                    <button onClick={handleDelete} className="delete-button">Delete</button>
                 </div>
             </form>
         </div>

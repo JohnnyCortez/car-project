@@ -58,7 +58,7 @@ const CarDetails = () => {
                 <p className="car-detail"><strong>Interior:</strong> {item.interior}</p>
             </div>
             <Link to={`/edit/${id}`} className="edit-link">Edit</Link>
-            <button onClick={handleDelete} className="delete-button">Delete</button>
+            <button onClick={handleDelete} className="delete-button" style={{marginLeft:"1205px"}}>Delete</button>
         </div>
     );
 };
