@@ -20,7 +20,7 @@ part 1
 
 Here's a walkthrough of implemented features:
 
-<img src='ecoAware.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='CarCommunity.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with ScreenToGif
 
