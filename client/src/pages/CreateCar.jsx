@@ -7,7 +7,8 @@ const CreateCar = () => {
         id: 0,
         name: '',
         color: 'option 1',
-        roof: 'option 1',
+        engine: 'option 1',
+        package_: 'option 1',
         wheels: 'option 1',
         interior: 'option 1',
     })
@@ -54,8 +55,17 @@ const CreateCar = () => {
         </select><br />
         <br/>
 
-        <label>Roof</label><br />
-        <select id='roof' name='roof' value={item.roof} onChange={handleChange}>
+        <label>Engine</label><br />
+        <select id='roof' name='roof' value={item.engine} onChange={handleChange}>
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+            <option value="Option 4">Option 4</option>
+        </select><br />
+        <br/>
+
+        <label>Package</label><br />
+        <select id='roof' name='roof' value={item.package_} onChange={handleChange}>
             <option value="Option 1">Option 1</option>
             <option value="Option 2">Option 2</option>
             <option value="Option 3">Option 3</option>

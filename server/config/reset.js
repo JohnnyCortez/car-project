@@ -10,7 +10,8 @@ const createItemsTable = async () => {
       id SERIAL PRIMARY KEY,
       name VARCHAR(255) NOT NULL,
       color VARCHAR(255) NOT NULL,
-      roof VARCHAR(255) NOT NULL,
+      package_ VARCHAR(255) NOT NULL,
+      engine VARCHAR(255) NOT NULL,
       wheels VARCHAR(255) NOT NULL,
       interior VARCHAR(255) NOT NULL
     )

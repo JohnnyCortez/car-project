@@ -12,7 +12,7 @@ const getItems = async (req, res) => {
 const getItemById = async (req, res) => {
   try {
     const id = req.params.id
-    const selectQuery = `SELECT name, color, roof, wheels, interior FROM CustomItem WHERE id = ${id}`
+    const selectQuery = `SELECT name, color, wheels, interior, package_, engine FROM CustomItem WHERE id = ${id}`
     const results = await pool.query(selectQuery)
 
     res.status(200).json(results.rows[0])
@@ -23,12 +23,12 @@ const getItemById = async (req, res) => {
 
 const createItem = async (req, res) => {
   try {
-    const { name, color, roof, wheels, interior } = req.body // TK???????
+    const { name, color, wheels, interior, package_, engine } = req.body // TK???????
     const results = await pool.query(`
-      INSERT INTO CustomItem (name, color, roof, wheels, interior)
-      VALUES($1, $2, $3, $4, $5)
+      INSERT INTO CustomItem (name, color, wheels, interior, package_, engine)
+      VALUES($1, $2, $3, $4, $5, $6)
       RETURNING *`,
-      [name, color, roof, wheels, interior]
+      [name, color, wheels, interior, package_, engine]
     )
     res.status(201).json(results.rows[0])
   } catch (error) {
@@ -39,10 +39,10 @@ const createItem = async (req, res) => {
 const updateItem = async (req, res) => {
   try {
     const id = parseInt(req.params.id)
-    const { name, color, roof, wheels, interior} = req.body // TK???????
+    const { name, color, wheels, interior, package_, engine} = req.body // TK???????
     const results = await pool.query(`
-      UPDATE CustomItem SET name = $1, color = $2, roof = $3, wheels = $4, interior = $5 WHERE id = $6`,
-      [name, color, roof, wheels, interior, id]
+      UPDATE CustomItem SET name = $1, color = $2, wheels = $3, interior = $4, package_ = $5, engine = $6 WHERE id = $7`,
+      [name, color, wheels, interior, package_, engine, id]
     )
     res.status(200).json(results.rows[0])
   } catch (error) {
