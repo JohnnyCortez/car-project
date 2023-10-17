@@ -10,3 +10,159 @@
     overflow-x: hidden;
     padding-bottom: 50px;
 }
+
+/* ------------------------------------------create car-------------------------------------- */
+.CreateItem {
+    background: rgb(147, 0, 0); /* Add a semi-transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+h2 {
+    color: #ffffff; /* Heading color */
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type='text'],
+select {
+    color: white;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+input[type='submit'] {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input, select {
+    color: black !important;
+    background-color: white !important;
+}
+
+/* ------------------------------------------view cars-------------------------------------- */
+
+
+.view-cars-container {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2); /* Background with 90% opacity */
+    color: #fff; /* Text color */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.car-card {
+    background: rgba(255, 255, 255, 0.7); /* Slightly more transparent white background (70% opacity) */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333; /* Text color */
+    flex: 1;
+    margin-right: 10px;
+    min-width: 30%; /* Adjust the width as needed */
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.no-results {
+    font-size: 18px;
+    color: #777;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+
+/* ------------------------------------------view car details-------------------------------------- */
+
+
+
+/* App.css */
+/* Add these styles to your existing CSS file or create a new one */
+
+.car-details-container {
+    background: rgba(0, 0, 0, 0.9); /* Slightly transparent background */
+    color: #fff; /* Text color */
+    padding: 20px;
+    text-align: center;
+}
+
+.car-details-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.car-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.car-detail {
+    font-size: 18px;
+    margin: 5px;
+}
+
+.edit-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.delete-button {
+    background: #dc3545; /* Red background color for the delete button */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-button:hover {
+    background: #c82333; /* Darker red color on hover */
+}
+
